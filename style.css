@@ -1,0 +1,190 @@
+/* Custom Theme Variables for a Professional Look */
+:root {
+    --color-primary: #17a2b8; /* Info Blue/Teal */
+    --color-secondary: #6c757d;
+    --color-background-light: #f4f6f9; /* Off-white body BG */
+    --color-card-bg: #ffffff;
+    --color-section-accent: #e9ecef; /* Light gray for section headers */
+    --color-border-subtle: #dee2e6;
+    --color-text: #212529;
+    --color-danger: #dc3545;
+    --color-warning: #ffc107;
+}
+
+[data-bs-theme="dark"] {
+    --color-primary: #20c997; /* Teal/Green for Dark Mode Contrast */
+    --color-secondary: #adb5bd;
+    --color-background-light: #1f2833; /* Darker body BG */
+    --color-card-bg: #2b3a4a; /* Darker Card BG */
+    --color-section-accent: #344759; /* Slightly lighter dark gray for accents */
+    --color-border-subtle: #495057;
+    --color-text: #f8f9fa;
+    --color-danger: #e66b78;
+    --color-warning: #ffda6a;
+    --bs-body-color: var(--color-text);
+    --bs-body-bg: var(--color-background-light);
+    /* Override Bootstrap defaults for modal headers/closers in dark mode */
+    --bs-modal-header-border-color: var(--color-border-subtle);
+}
+
+body { 
+    background-color: var(--color-background-light);
+    color: var(--color-text);
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 50px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Main Header */
+#main-title {
+    color: var(--color-primary);
+    font-weight: 700;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--color-primary);
+    margin-bottom: 25px;
+    font-size: 2.5rem;
+}
+header .lead {
+    color: var(--color-secondary);
+}
+
+/* Form Container - Replaced with Shadowed Card Look */
+.form-container { 
+    background: var(--color-card-bg);
+    padding: 30px; 
+    border-radius: 15px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+    border: 1px solid var(--color-border-subtle);
+}
+[data-bs-theme="dark"] .form-container {
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05); 
+}
+
+/* Fieldset and Legend Styling for Property Fields */
+#property-fields {
+    border: none; /* Removed default fieldset border */
+    background-color: var(--color-card-bg); /* Use card BG */
+    border-radius: 10px;
+    padding: 0 !important;
+    margin-bottom: 30px !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+#property-fields > legend {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px 10px 0 0;
+    border-left: none;
+    font-size: 1.3rem;
+    margin-bottom: 0;
+    width: 100%;
+}
+#property-fields .row, #property-fields .mb-3, #property-fields .my-3 {
+    padding: 0 20px;
+}
+#property-fields .row:last-of-type {
+    padding-bottom: 20px;
+}
+#property-fields .mb-3:last-of-type {
+    padding-bottom: 20px;
+}
+
+/* Dynamic Section Header Styling (Collapsibles) */
+.section-header {
+    padding: 15px 20px;
+    background-color: var(--color-section-accent); 
+    border: 1px solid var(--color-border-subtle);
+    border-radius: 8px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+    font-weight: 600;
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between;
+    align-items: center;
+}
+.section-header:hover {
+    background-color: color-mix(in srgb, var(--color-section-accent) 80%, var(--color-primary)); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Active Collapse Header State */
+.section-header.active {
+    background-color: var(--color-primary); 
+    color: white; 
+    border-color: var(--color-primary);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.section-header.active legend,
+.section-header.active .bi {
+    color: white !important; 
+}
+.section-header legend {
+    color: var(--color-text);
+    border-left: none; /* Remove legacy border */
+    margin: 0;
+}
+.section-header:not(.active):hover legend,
+.section-header:not(.active):hover .bi {
+    color: var(--color-primary);
+}
+
+.section-body {
+    border: 1px solid var(--color-border-subtle);
+    border-top: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: var(--color-card-bg);
+}
+
+/* Form Controls */
+.form-control, .form-select {
+    border-radius: 4px;
+    border: 1px solid var(--color-border-subtle);
+    background-color: var(--color-card-bg);
+    color: var(--color-text);
+}
+
+/* Input group */
+.input-group-text {
+    border: 1px solid var(--color-border-subtle);
+    background-color: var(--color-section-accent);
+}
+[data-bs-theme="dark"] .input-group-text {
+    background-color: color-mix(in srgb, var(--color-section-accent) 80%, black);
+    color: var(--color-text);
+}
+
+
+/* Dynamic Remove Button */
+.dynamic-remove {
+    cursor: pointer;
+    margin-left: 15px;
+    color: var(--color-danger);
+    transition: color 0.2s;
+    font-size: 1.1rem;
+}
+.section-header.active .dynamic-remove {
+    color: var(--color-warning) !important; /* Stand out in active state */
+}
+
+/* Theme Switcher Styling */
+.form-check-input:checked {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+.form-check-label i {
+    color: var(--color-text);
+}
+
+/* Modal Styling Fixes */
+.modal-header.bg-info {
+    background-color: var(--color-primary) !important;
+}
+.modal-header.bg-info .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%); /* White color for close icon */
+}
+[data-bs-theme="dark"] .modal-header.bg-info .btn-close {
+    filter: invert(0) grayscale(100%) brightness(200%); /* Maintain contrast */
+}

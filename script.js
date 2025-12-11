@@ -63,6 +63,9 @@ function generateAdditionalDocHTML(num, initialData = {}) {
     const grantor = initialData.grantor || '';
     const grantee = initialData.grantee || '';
     const instNo = initialData.instNo || '';
+    // NEW: Capture dates from initialData
+    const datedDate = initialData.datedDate || '';
+    const recordingDate = initialData.recordingDate || '';
     
     return `
         <div class="mb-4" id="additionalDoc-${num}-wrapper">
@@ -88,11 +91,11 @@ function generateAdditionalDocHTML(num, initialData = {}) {
                     <div class="row g-3">
                         <div class="col-md-4">
                             <label for="doc${num}-dated-date" class="form-label">Dated Date:</label>
-                            <input type="date" id="doc${num}-dated-date" name="doc${num}-dated-date" class="form-control" data-excel-field="Add. Doc ${num} - Dated Date" oninput="saveFormData()">
+                            <input type="date" id="doc${num}-dated-date" name="doc${num}-dated-date" class="form-control" value="${datedDate}" data-excel-field="Add. Doc ${num} - Dated Date" oninput="saveFormData()">
                         </div>
                         <div class="col-md-4">
                             <label for="doc${num}-recording-date" class="form-label">Recording Date:</label>
-                            <input type="date" id="doc${num}-recording-date" name="doc${num}-recording-date" class="form-control" data-excel-field="Add. Doc ${num} - Recording Date" oninput="saveFormData()">
+                            <input type="date" id="doc${num}-recording-date" name="doc${num}-recording-date" class="form-control" value="${recordingDate}" data-excel-field="Add. Doc ${num} - Recording Date" oninput="saveFormData()">
                         </div>
                         <div class="col-md-4">
                             <label for="doc${num}-inst-no" class="form-label">Inst. No. / Book/Page:</label>
@@ -393,12 +396,19 @@ function addAdditionalPropertyDocSectionFromModal() {
     const modalGrantor = document.getElementById('modal-doc-grantor').value;
     const modalGrantee = document.getElementById('modal-doc-grantee').value;
     const modalInstNo = document.getElementById('modal-doc-inst').value;
+    // NEW: Capture dated date and recording date from modal
+    const modalDatedDate = document.getElementById('modal-doc-dated-date').value;
+    const modalRecordingDate = document.getElementById('modal-doc-recording-date').value;
+
 
     const initialData = {
         type: modalType,
         grantor: modalGrantor,
         grantee: modalGrantee,
-        instNo: modalInstNo
+        instNo: modalInstNo,
+        // NEW: Pass the date values
+        datedDate: modalDatedDate,
+        recordingDate: modalRecordingDate
     };
 
     additionalDocCount++;
@@ -412,10 +422,14 @@ function addAdditionalPropertyDocSectionFromModal() {
     const modalInstance = bootstrap.Modal.getInstance(modalElement);
     if (modalInstance) modalInstance.hide();
     
+    // Reset modal inputs
     document.getElementById('modal-doc-type').value = '';
     document.getElementById('modal-doc-grantor').value = '';
     document.getElementById('modal-doc-grantee').value = '';
     document.getElementById('modal-doc-inst').value = '';
+    // NEW: Reset date inputs
+    document.getElementById('modal-doc-dated-date').value = '';
+    document.getElementById('modal-doc-recording-date').value = '';
 
     // Scroll to the new section 
     const newSection = document.getElementById(`additionalDoc-${additionalDocCount}-wrapper`);

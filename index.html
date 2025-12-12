@@ -22,8 +22,9 @@
         <div class="form-container">
             <form id="dataEntryForm">
 
-                <fieldset id="property-fields">
-                    <legend><i class="bi bi-geo-alt-fill me-2"></i> Property & Search Fields</legend>
+                <fieldset id="property-fields" class="mb-4 p-4 border rounded">
+                    <legend class="float-none w-auto px-2"><i class="bi bi-geo-alt-fill me-2"></i> Property & Search Fields</legend>
+                    
                     <div class="row g-3 pt-4">
                         <div class="col-md-3">
                             <label for="order-no" class="form-label">Order No.</label>
@@ -50,7 +51,7 @@
                         </div>
                         <div class="col-md-3">
                             <label for="state" class="form-label">State</label>
-                            <input type="text" id="state" name="state" class="form-control" class="form-control" data-excel-field="State" oninput="saveFormData()">
+                            <input type="text" id="state" name="state" class="form-control" data-excel-field="State" oninput="saveFormData()">
                         </div>
                     </div>
                     
@@ -74,11 +75,11 @@
                     </div>
                 </fieldset>
 
-                 <div class="mb-4" id="taxes-1-wrapper">
-                    <div class="section-header" data-bs-toggle="collapse" data-bs-target="#taxes1Collapse" aria-expanded="false" aria-controls="taxes1Collapse">
-                        <legend><i class="bi bi-cash-stack me-2"></i> Taxes / Assessments Information - 1</legend>
+                <div class="mb-4" id="taxes-1-wrapper">
+                    <div class="section-header p-2 bg-light border rounded-top cursor-pointer" data-bs-toggle="collapse" data-bs-target="#taxes1Collapse" aria-expanded="false" aria-controls="taxes1Collapse">
+                        <legend class="mb-0 fs-5"><i class="bi bi-cash-stack me-2"></i> Taxes / Assessments Information - 1</legend>
                     </div>
-                    <div class="collapse section-body p-4" id="taxes1Collapse">
+                    <div class="collapse section-body p-4 border border-top-0 rounded-bottom" id="taxes1Collapse">
                         <fieldset class="tax-section" data-doc-type="Taxes-1">
                             <div class="row g-3">
                                 <div class="col-md-4">
@@ -102,11 +103,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="mt-3" id="tax1-unpaid-year-group" style="display: none;">
+                            <div class="mt-3" id="tax1-unpaid-year-group">
                                 <label for="tax1-unpaid-year" class="form-label">If Unpaid, which year(s) are unpaid?</label>
                                 <input type="text" id="tax1-unpaid-year" name="tax1-unpaid-year" class="form-control" data-excel-field="Tax 1 - Unpaid Year(s)" oninput="saveFormData()">
                             </div>
-                            <div class="mt-3" id="tax1-comments-group" style="display: none;">
+                            <div class="mt-3" id="tax1-comments-group">
                                 <label for="tax1-comments" class="form-label">Comments:</label>
                                 <textarea id="tax1-comments" name="tax1-comments" class="form-control" data-excel-field="Tax 1 - Comments" oninput="saveFormData()"></textarea>
                             </div>
@@ -120,12 +121,12 @@
                         <i class="bi bi-plus-circle me-1"></i> Add Another Tax/Assessment
                     </button>
                 </div>
-
+                
                 <div class="mb-4">
-                    <div class="section-header active" data-bs-toggle="collapse" data-bs-target="#deed1Collapse" aria-expanded="true" aria-controls="deed1Collapse">
-                        <legend><i class="bi bi-file-earmark-text-fill me-2"></i> Document Type: Vesting Deed (Current) - 1</legend>
+                    <div class="section-header active p-2 bg-light border rounded-top cursor-pointer" data-bs-toggle="collapse" data-bs-target="#deed1Collapse" aria-expanded="true" aria-controls="deed1Collapse">
+                        <legend class="mb-0 fs-5"><i class="bi bi-file-earmark-text-fill me-2"></i> Document Type: Vesting Deed (Current) - 1</legend>
                     </div>
-                    <div class="collapse show section-body p-4" id="deed1Collapse">
+                    <div class="collapse show section-body p-4 border border-top-0 rounded-bottom" id="deed1Collapse">
                         <fieldset class="deed-section" data-doc-type="Deed-1">
                             <div class="row g-3">
                                 <div class="col-md-6">
@@ -160,15 +161,15 @@
                                     </div>
                                 </div>
                             </div>
-                            </fieldset>
+                        </fieldset>
                     </div>
                 </div>
 
                 <div class="mb-4">
-                    <div class="section-header" data-bs-toggle="collapse" data-bs-target="#priorDeed1Collapse" aria-expanded="false" aria-controls="priorDeed1Collapse">
-                        <legend><i class="bi bi-arrow-return-left me-2"></i> Document Type: Prior Deed - 1</legend>
+                    <div class="section-header p-2 bg-light border rounded-top cursor-pointer" data-bs-toggle="collapse" data-bs-target="#priorDeed1Collapse" aria-expanded="false" aria-controls="priorDeed1Collapse">
+                        <legend class="mb-0 fs-5"><i class="bi bi-arrow-return-left me-2"></i> Document Type: Prior Deed - 1</legend>
                     </div>
-                    <div class="collapse section-body p-4" id="priorDeed1Collapse">
+                    <div class="collapse section-body p-4 border border-top-0 rounded-bottom" id="priorDeed1Collapse">
                         <fieldset class="deed-section" data-doc-type="Prior-Deed-1">
                             <div class="row g-3">
                                 <div class="col-md-6">
@@ -203,17 +204,17 @@
                                     </div>
                                 </div>
                             </div>
-                            </fieldset>
+                        </fieldset>
                     </div>
                 </div>
                 
                 <hr class="my-4">
 
                 <div id="mortgage-1-wrapper" class="mb-4">
-                    <div class="section-header" data-bs-toggle="collapse" data-bs-target="#mortgage1Collapse" aria-expanded="false" aria-controls="mortgage1Collapse">
-                        <legend><i class="bi bi-bank me-2"></i> Document Type: Mortgage / Deed of Trust - 1</legend>
+                    <div class="section-header p-2 bg-light border rounded-top cursor-pointer" data-bs-toggle="collapse" data-bs-target="#mortgage1Collapse" aria-expanded="false" aria-controls="mortgage1Collapse">
+                        <legend class="mb-0 fs-5"><i class="bi bi-bank me-2"></i> Document Type: Mortgage / Deed of Trust - 1</legend>
                     </div>
-                    <div class="collapse section-body p-4" id="mortgage1Collapse">
+                    <div class="collapse section-body p-4 border border-top-0 rounded-bottom" id="mortgage1Collapse">
                         <fieldset class="transaction-section" data-doc-type="Mortgage-1">
                             <div class="row g-3">
                                 <div class="col-md-4">
@@ -264,66 +265,10 @@
                                     <input type="text" id="m1-mers-nominee" name="m1-mers-nominee" class="form-control" data-excel-field="Mtg 1 - MERS Nominee" oninput="saveFormData()">
                                 </div>
                             </div>
+                            </fieldset>
+                    </div>
+                </div>
 
-                            <div class="modal fade" id="addDocModal" tabindex="-1" aria-labelledby="addDocModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-info text-white">
-                    <h5 class="modal-title" id="addDocModalLabel"><i class="bi bi-file-earmark-plus-fill me-2"></i> New Additional Property Related Document</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p class="text-muted">Enter key details for the document before adding it to the form.</p>
-                    <div class="mb-3">
-                        <label for="modal-doc-type" class="form-label fw-bold">1. Document Type:</label>
-                        <input type="text" id="modal-doc-type" class="form-control" placeholder="e.g., Any Modification, Deed, Affidavit, Power of Attorney, Easement">
-                    </div>
-                    <div class="row g-3">
-                        <div class="col-md-6 mb-3">
-                            <label for="modal-doc-grantor" class="form-label fw-bold">2. Grantor / First Party:</label>
-                            <input type="text" id="modal-doc-grantor" class="form-control" placeholder="Name(s) of the Transferor/Debtor">
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="modal-doc-grantee" class="form-label fw-bold">3. Grantee / Second Party:</label>
-                            <input type="text" id="modal-doc-grantee" class="form-control" placeholder="Name(s) of the Recipient/Creditor">
-                        </div>
-                    </div>
-                    <div class="row g-3 mb-3">
-                        <div class="col-md-6">
-                            <label for="modal-doc-dated-date" class="form-label">4. Dated Date (Optional):</label>
-                            <input type="date" id="modal-doc-dated-date" class="form-control">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="modal-doc-recording-date" class="form-label">5. Recording Date (Optional):</label>
-                            <input type="date" id="modal-doc-recording-date" class="form-control">
-                        </div>
- <div class="row g-3">
-                                <div class="col-md-4">
-                                    <label for="deed1-consideration" class="form-label">Consideration Amount:</label>
-                                    <div class="input-group">
-                                        <span class="input-group-text">$</span>
-                                        <input type="number" step="0.01" id="deed1-consideration" name="deed1-consideration" class="form-control" data-excel-field="Deed - Consideration Amount" oninput="saveFormData()">
-                                    </div>
-                                </div>
-                            </div>
-
-                         <div class="mt-3" id="tax1-comments-group" style="display: none;">
-                                <label for="tax1-comments" class="form-label"> Notes / Comments:</label>
-                                <textarea id="tax1-comments" name="tax1-comments" class="form-control" data-excel-field="Tax 1 - Comments" oninput="saveFormData()"></textarea>
-                            </div>
-                        
-                    </div>
-                    <div class="mb-3">
-                        <label for="modal-doc-inst" class="form-label">6. Instrument No. / Book & Page (Optional):</label>
-                        <input type="text" id="modal-doc-inst" class="form-control" placeholder="Instrument number or book/page">
-                    </div>
-                </div>
-                        
-                    </div>
-                </div>
-                            
-                        </fieldset>
-                        
                 <div id="additionalMortgages"></div>
                 <div class="text-start mb-4 ps-3">
                     <button type="button" class="btn btn-outline-info btn-sm" onclick="addMortgageSection()">
@@ -440,35 +385,26 @@
                             <label for="modal-doc-recording-date" class="form-label">5. Recording Date (Optional):</label>
                             <input type="date" id="modal-doc-recording-date" class="form-control">
                         </div>
- <div class="row g-3">
-                                <div class="col-md-4">
-                                    <label for="deed1-consideration" class="form-label">Consideration Amount:</label>
-                                    <div class="input-group">
-                                        <span class="input-group-text">$</span>
-                                        <input type="number" step="0.01" id="deed1-consideration" name="deed1-consideration" class="form-control" data-excel-field="Deed - Consideration Amount" oninput="saveFormData()">
-                                    </div>
-                                </div>
-                            </div>
-                        
                     </div>
                     <div class="mb-3">
                         <label for="modal-doc-inst" class="form-label">6. Instrument No. / Book & Page (Optional):</label>
                         <input type="text" id="modal-doc-inst" class="form-control" placeholder="Instrument number or book/page">
                     </div>
+                    <div class="mb-3">
+                        <label for="modal-doc-comments" class="form-label">7. Notes / Comments (Optional):</label>
+                        <textarea id="modal-doc-comments" class="form-control"></textarea>
+                    </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-info" onclick="addAdditionalPropertyDocSectionFromModal()">
-                        <i class="bi bi-plus-lg me-1"></i> Add Document Section
-                    </button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-info text-white" onclick="addCustomDocument()">Add Document</button>
                 </div>
             </div>
         </div>
     </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
+    
 </body>
 </html>

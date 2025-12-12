@@ -266,9 +266,28 @@
                                     <input type="text" id="m1-mers-nominee" name="m1-mers-nominee" class="form-control" data-excel-field="Mtg 1 - MERS Nominee" oninput="saveFormData()">
                                 </div>
                             </div>
+<hr class="my-4">
+                
+                <div id="additionalPropertyDocs"></div>
+                <div class="text-start mb-4 ps-3">
+                    <button type="button" class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#addDocModal">
+                        <i class="bi bi-plus-circle me-1"></i> Add Additional Property Document (e.g., Any Modification, Deed, Affidavit, POA)
+                    </button>
+                </div>
+                <div class="row g-3">
+                                <div class="col-md-4">
+                                    <label for="deed1-consideration" class="form-label"> Amount:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">$</span>
+                                        <input type="number" step="0.01" id="deed1-consideration" name="deed1-consideration" class="form-control" data-excel-field="Deed - Consideration Amount" oninput="saveFormData()">
+                                    </div>
+                                </div>
+                            </div>
+                <hr class="my-4">
                         </fieldset>
                     </div>
                 </div>
+                
                 <div id="additionalMortgages"></div>
                 <div class="text-start mb-4 ps-3">
                     <button type="button" class="btn btn-outline-info btn-sm" onclick="addMortgageSection()">

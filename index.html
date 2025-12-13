@@ -283,17 +283,50 @@
                                 </div>
                             </div>
         <!-- Made Changes -->
-
+ <div class="modal fade" id="addDocModal" tabindex="-1" aria-labelledby="addDocModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h5 class="modal-title" id="addDocModalLabel"><i class="bi bi-file-earmark-plus-fill me-2"></i> New Additional Property Document</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-muted">Enter key details for the document before adding it to the form.</p>
+                    <div class="mb-3">
+                        <label for="modal-doc-type" class="form-label fw-bold">1. Document Type:</label>
+                        <input type="text" id="modal-doc-type" class="form-control" placeholder="e.g., Any Deed, Affidavit, Power of Attorney, Easement">
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-md-6 mb-3">
+                            <label for="modal-doc-grantor" class="form-label fw-bold">2. Grantor / First Party:</label>
+                            <input type="text" id="modal-doc-grantor" class="form-control" placeholder="Name(s) of the Transferor/Debtor">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="modal-doc-grantee" class="form-label fw-bold">3. Grantee / Second Party:</label>
+                            <input type="text" id="modal-doc-grantee" class="form-control" placeholder="Name(s) of the Recipient/Creditor">
+                        </div>
+                    </div>
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label for="modal-doc-dated-date" class="form-label">4. Dated Date (Optional):</label>
+                            <input type="date" id="modal-doc-dated-date" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="modal-doc-recording-date" class="form-label">5. Recording Date (Optional):</label>
+                            <input type="date" id="modal-doc-recording-date" class="form-control">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="modal-doc-inst" class="form-label">6. Instrument No. / Book & Page (Optional):</label>
+                        <input type="text" id="modal-doc-inst" class="form-control" placeholder="Instrument number or book/page">
+                    </div>
          <!-- Made Changes -->     
                         </fieldset>
                     </div>
                 </div>
-                <!-- and closing -->
-<div class="mt-3" id="tax1-comments-group" style="display: none;">
-                                <label for="tax1-comments" class="form-label">Comments:</label>
-                                <textarea id="tax1-comments" name="tax1-comments" class="form-control" data-excel-field="Tax 1 - Comments" oninput="saveFormData()"></textarea>
-</div>
-                <!-- and closing -->
+                <!-- and Comments Section -->
+
+                <!-- and Comments Section -->
                 <div id="additionalMortgages"></div>
                 <div class="text-start mb-4 ps-3">
                     <button type="button" class="btn btn-outline-info btn-sm" onclick="addMortgageSection()">

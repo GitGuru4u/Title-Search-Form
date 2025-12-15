@@ -188,6 +188,7 @@ header .lead {
 [data-bs-theme="dark"] .modal-header.bg-info .btn-close {
     filter: invert(0) grayscale(100%) brightness(200%); /* Maintain contrast */
 }
+
 .gradient-text {
     /* Define the gradient colors (using blues for a professional/LinkedIn feel) */
     background: linear-gradient(to right, #0077b5, #00b4d8); 

@@ -867,12 +867,15 @@ function exportToExcel() {
 
 // --- CURRENCY FORMATTING UTILITY (Keep existing utility functions here) ---
 // ...
+
 function setCopyrightYear() {
     const yearSpan = document.getElementById('current-year');
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
     }
 }
+
+
 // --- INITIALIZATION ---
 document.addEventListener('DOMContentLoaded', function() {
     // Apply theme first
@@ -888,6 +891,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 2. Set up auto-save on input for all form fields
     // ... (rest of your existing code)
 });
+
 
 // --- INITIALIZATION ---
 document.addEventListener('DOMContentLoaded', function() {

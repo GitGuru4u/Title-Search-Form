@@ -865,6 +865,32 @@ function exportToExcel() {
     XLSX.writeFile(workbook, "TitleDataExport.xlsx");
 }
 
+// --- CURRENCY FORMATTING UTILITY (Keep existing utility functions here) ---
+// ...
+
+function setCopyrightYear() {
+    const yearSpan = document.getElementById('current-year');
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+}
+
+
+// --- INITIALIZATION ---
+document.addEventListener('DOMContentLoaded', function() {
+    // Apply theme first
+    applyInitialTheme();
+    document.getElementById('darkModeSwitch').addEventListener('change', toggleTheme);
+
+    // 1. Load data and rebuild dynamic sections
+    loadFormData();
+    
+    // NEW: Call the function to set the copyright year
+    setCopyrightYear(); 
+    
+    // 2. Set up auto-save on input for all form fields
+    // ... (rest of your existing code)
+});
 
 // --- INITIALIZATION ---
 document.addEventListener('DOMContentLoaded', function() {

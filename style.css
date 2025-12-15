@@ -188,3 +188,17 @@ header .lead {
 [data-bs-theme="dark"] .modal-header.bg-info .btn-close {
     filter: invert(0) grayscale(100%) brightness(200%); /* Maintain contrast */
 }
+.gradient-text {
+    /* Define the gradient colors (using blues for a professional/LinkedIn feel) */
+    background: linear-gradient(to right, #0077b5, #00b4d8); 
+    
+    /* Clip the background to the text boundary */
+    -webkit-background-clip: text;
+    background-clip: text;
+    
+    /* Make the foreground text color transparent so the background gradient shows through */
+    color: transparent; 
+    
+    /* Optional: Make text bolder for better gradient visibility */
+    font-weight: 600;
+}

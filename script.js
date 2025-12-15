@@ -867,15 +867,12 @@ function exportToExcel() {
 
 // --- CURRENCY FORMATTING UTILITY (Keep existing utility functions here) ---
 // ...
-
 function setCopyrightYear() {
     const yearSpan = document.getElementById('current-year');
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
     }
 }
-
-
 // --- INITIALIZATION ---
 document.addEventListener('DOMContentLoaded', function() {
     // Apply theme first

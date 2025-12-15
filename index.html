@@ -9,13 +9,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">   
 </head>
 <body>
-    <!-- and made changes-Live Chat --> 
-<script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script><script id="zsiqscript" src="https://salesiq.zohopublic.in/widget?wc=siqcfb453eb7fef5895188c22e1a1abc0f333162b1e9bb5a9a1da1847f60ad44d8d5c9bd73e9329aa7f857363b5a5ae33e0" defer></script>
-<!-- and made changes-Live Chat --> 
-    
+
     <div class="container my-5">
         <header class="text-center mb-5">
             <h1 id="main-title">Title Search Data Entry Form</h1>
@@ -74,16 +71,95 @@
                     <div class="mb-3 mt-3">
                         <label for="legal-description-ref" class="form-label">Full Legal Description Reference (Optional)</label>
                         <textarea id="legal-description-ref" name="legal-description-ref" class="form-control" data-excel-field="Legal Description Ref" oninput="saveFormData()"></textarea>
-                    </div>  
-<!-- and closing -->
-                    <div class="mb-3 mt-3">
-                        <label for="legal-description-ref" class="form-label"> Any Comments (Optional)</label>
-                        <textarea id="legal-description-ref" name="legal-description-ref" class="form-control" data-excel-field="Legal Description Ref" oninput="saveFormData()"></textarea>
-                    </div> 
-                    
-<!-- and closing -->      
+                    </div>
                 </fieldset>
-               
+
+                <div class="mb-4">
+                    <div class="section-header active" data-bs-toggle="collapse" data-bs-target="#deed1Collapse" aria-expanded="true" aria-controls="deed1Collapse">
+                        <legend><i class="bi bi-file-earmark-text-fill me-2"></i> Document Type: Vesting Deed (Current) - 1</legend>
+                    </div>
+                    <div class="collapse show section-body p-4" id="deed1Collapse">
+                        <fieldset class="deed-section" data-doc-type="Deed-1">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="deed1-grantor" class="form-label">Grantor (Seller):</label>
+                                    <input type="text" id="deed1-grantor" name="deed1-grantor" class="form-control" data-excel-field="Deed - Grantor" oninput="saveFormData()">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="deed1-grantee" class="form-label">Grantee (Buyer/Current Owner):</label>
+                                    <input type="text" id="deed1-grantee" name="deed1-grantee" class="form-control" data-excel-field="Deed - Grantee" oninput="saveFormData()">
+                                </div>
+                            </div>
+                            <div class="row g-3 my-3">
+                                <div class="col-md-4">
+                                    <label for="deed1-dated-date" class="form-label">Dated Date:</label>
+                                    <input type="date" id="deed1-dated-date" name="deed1-dated-date" class="form-control" data-excel-field="Deed - Dated Date" oninput="saveFormData()">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="deed1-recording-date" class="form-label">Recording Date:</label>
+                                    <input type="date" id="deed1-recording-date" name="deed1-recording-date" class="form-control" data-excel-field="Deed - Recording Date" oninput="saveFormData()">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="deed1-inst-no" class="form-label">Inst. No. / Book/Page:</label>
+                                    <input type="text" id="deed1-inst-no" name="deed1-inst-no" class="form-control" data-excel-field="Deed - Inst. No." oninput="saveFormData()">
+                                </div>
+                            </div>
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <label for="deed1-consideration" class="form-label">Consideration Amount:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">$</span>
+                                        <input type="number" step="0.01" id="deed1-consideration" name="deed1-consideration" class="form-control" data-excel-field="Deed - Consideration Amount" oninput="saveFormData()">
+                                    </div>
+                                </div>
+                            </div>
+                            </fieldset>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <div class="section-header" data-bs-toggle="collapse" data-bs-target="#priorDeed1Collapse" aria-expanded="false" aria-controls="priorDeed1Collapse">
+                        <legend><i class="bi bi-arrow-return-left me-2"></i> Document Type: Prior Deed - 1</legend>
+                    </div>
+                    <div class="collapse section-body p-4" id="priorDeed1Collapse">
+                        <fieldset class="deed-section" data-doc-type="Prior-Deed-1">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="priorDeed1-grantor" class="form-label">Grantor (Seller):</label>
+                                    <input type="text" id="priorDeed1-grantor" name="priorDeed1-grantor" class="form-control" data-excel-field="Prior Deed - Grantor" oninput="saveFormData()">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="priorDeed1-grantee" class="form-label">Grantee (Buyer/Previous Owner):</label>
+                                    <input type="text" id="priorDeed1-grantee" name="priorDeed1-grantee" class="form-control" data-excel-field="Prior Deed - Grantee" oninput="saveFormData()">
+                                </div>
+                            </div>
+                            <div class="row g-3 my-3">
+                                <div class="col-md-4">
+                                    <label for="priorDeed1-dated-date" class="form-label">Dated Date:</label>
+                                    <input type="date" id="priorDeed1-dated-date" name="priorDeed1-dated-date" class="form-control" data-excel-field="Prior Deed - Dated Date" oninput="saveFormData()">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="priorDeed1-recording-date" class="form-label">Recording Date:</label>
+                                    <input type="date" id="priorDeed1-recording-date" name="priorDeed1-recording-date" class="form-control" data-excel-field="Prior Deed - Recording Date" oninput="saveFormData()">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="priorDeed1-inst-no" class="form-label">Inst. No. / Book/Page:</label>
+                                    <input type="text" id="priorDeed1-inst-no" name="priorDeed1-inst-no" class="form-control" data-excel-field="Prior Deed - Inst. No." oninput="saveFormData()">
+                                </div>
+                            </div>
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <label for="priorDeed1-consideration" class="form-label">Consideration Amount:</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">$</span>
+                                        <input type="number" step="0.01" id="priorDeed1-consideration" name="priorDeed1-consideration" class="form-control" data-excel-field="Prior Deed - Consideration Amount" oninput="saveFormData()">
+                                    </div>
+                                </div>
+                            </div>
+                            </fieldset>
+                    </div>
+                </div>
+
                 <div class="mb-4" id="taxes-1-wrapper">
                     <div class="section-header" data-bs-toggle="collapse" data-bs-target="#taxes1Collapse" aria-expanded="false" aria-controls="taxes1Collapse">
                         <legend><i class="bi bi-cash-stack me-2"></i> Taxes / Assessments Information - 1</legend>
@@ -129,104 +205,6 @@
                     <button type="button" class="btn btn-outline-info btn-sm" onclick="addTaxSection()">
                         <i class="bi bi-plus-circle me-1"></i> Add Another Tax/Assessment
                     </button>
-                </div>
-
-                <div class="mb-4">
-                    <div class="section-header active" data-bs-toggle="collapse" data-bs-target="#deed1Collapse" aria-expanded="true" aria-controls="deed1Collapse">
-                        <legend><i class="bi bi-file-earmark-text-fill me-2"></i> Document Type: Vesting Deed (Current) - 1</legend>
-                    </div>
-                    <div class="collapse show section-body p-4" id="deed1Collapse">
-                        <fieldset class="deed-section" data-doc-type="Deed-1">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <label for="deed1-grantor" class="form-label">Grantor (Seller):</label>
-                                    <input type="text" id="deed1-grantor" name="deed1-grantor" class="form-control" data-excel-field="Deed - Grantor" oninput="saveFormData()">
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="deed1-grantee" class="form-label">Grantee (Buyer/Current Owner):</label>
-                                    <input type="text" id="deed1-grantee" name="deed1-grantee" class="form-control" data-excel-field="Deed - Grantee" oninput="saveFormData()">
-                                </div>
-                            </div>
-                            <div class="row g-3 my-3">
-                                <div class="col-md-4">
-                                    <label for="deed1-dated-date" class="form-label">Dated Date:</label>
-                                    <input type="date" id="deed1-dated-date" name="deed1-dated-date" class="form-control" data-excel-field="Deed - Dated Date" oninput="saveFormData()">
-                                </div>
-                                <div class="col-md-4">
-                                    <label for="deed1-recording-date" class="form-label">Recording Date:</label>
-                                    <input type="date" id="deed1-recording-date" name="deed1-recording-date" class="form-control" data-excel-field="Deed - Recording Date" oninput="saveFormData()">
-                                </div>
-                                <div class="col-md-4">
-                                    <label for="deed1-inst-no" class="form-label">Inst. No. / Book/Page:</label>
-                                    <input type="text" id="deed1-inst-no" name="deed1-inst-no" class="form-control" data-excel-field="Deed - Inst. No." oninput="saveFormData()">
-                                </div>
-                            </div>
-                            <div class="row g-3">
-                                <div class="col-md-4">
-                                    <label for="deed1-consideration" class="form-label">Consideration Amount:</label>
-                                    <div class="input-group">
-                                        <span class="input-group-text">$</span>
-                                        <input type="number" step="0.01" id="deed1-consideration" name="deed1-consideration" class="form-control" data-excel-field="Deed - Consideration Amount" oninput="saveFormData()">
-                                    </div>
-                                </div>
-                                <!-- and closing -->
-                                <div class="mb-3 mt-3">
-                        <label for="legal-description-ref" class="form-label"> Any Comments (Optional)</label>
-                        <textarea id="legal-description-ref" name="legal-description-ref" class="form-control" data-excel-field="Legal Description Ref" oninput="saveFormData()"></textarea>
-                    </div>
-                            </div>
-                            <!-- and made changes -->
-                            </fieldset>
-                    </div>
-                </div>
-
-                <div class="mb-4">
-                    <div class="section-header" data-bs-toggle="collapse" data-bs-target="#priorDeed1Collapse" aria-expanded="false" aria-controls="priorDeed1Collapse">
-                        <legend><i class="bi bi-arrow-return-left me-2"></i> Document Type: Prior Deed - 1</legend>
-                    </div>
-                    <div class="collapse section-body p-4" id="priorDeed1Collapse">
-                        <fieldset class="deed-section" data-doc-type="Prior-Deed-1">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <label for="priorDeed1-grantor" class="form-label">Grantor (Seller):</label>
-                                    <input type="text" id="priorDeed1-grantor" name="priorDeed1-grantor" class="form-control" data-excel-field="Prior Deed - Grantor" oninput="saveFormData()">
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="priorDeed1-grantee" class="form-label">Grantee (Buyer/Previous Owner):</label>
-                                    <input type="text" id="priorDeed1-grantee" name="priorDeed1-grantee" class="form-control" data-excel-field="Prior Deed - Grantee" oninput="saveFormData()">
-                                </div>
-                            </div>
-                            <div class="row g-3 my-3">
-                                <div class="col-md-4">
-                                    <label for="priorDeed1-dated-date" class="form-label">Dated Date:</label>
-                                    <input type="date" id="priorDeed1-dated-date" name="priorDeed1-dated-date" class="form-control" data-excel-field="Prior Deed - Dated Date" oninput="saveFormData()">
-                                </div>
-                                <div class="col-md-4">
-                                    <label for="priorDeed1-recording-date" class="form-label">Recording Date:</label>
-                                    <input type="date" id="priorDeed1-recording-date" name="priorDeed1-recording-date" class="form-control" data-excel-field="Prior Deed - Recording Date" oninput="saveFormData()">
-                                </div>
-                                <div class="col-md-4">
-                                    <label for="priorDeed1-inst-no" class="form-label">Inst. No. / Book/Page:</label>
-                                    <input type="text" id="priorDeed1-inst-no" name="priorDeed1-inst-no" class="form-control" data-excel-field="Prior Deed - Inst. No." oninput="saveFormData()">
-                                </div>
-                            </div>
-                            <div class="row g-3">
-                                <div class="col-md-4">
-                                    <label for="priorDeed1-consideration" class="form-label">Consideration Amount:</label>
-                                    <div class="input-group">
-                                        <span class="input-group-text">$</span>
-                                        <input type="number" step="0.01" id="priorDeed1-consideration" name="priorDeed1-consideration" class="form-control" data-excel-field="Prior Deed - Consideration Amount" oninput="saveFormData()">
-                                    </div>
-                                </div>
-        <!-- and closing -->
-                                <div class="mb-3 mt-3">
-                        <label for="legal-description-ref" class="form-label"> Any Comments (Optional)</label>
-                        <textarea id="legal-description-ref" name="legal-description-ref" class="form-control" data-excel-field="Legal Description Ref" oninput="saveFormData()"></textarea>
-                                </div>
-        <!-- and closing -->
-                            </div>
-                            </fieldset>
-                    </div>
                 </div>
                 
                 <hr class="my-4">
@@ -286,16 +264,9 @@
                                     <input type="text" id="m1-mers-nominee" name="m1-mers-nominee" class="form-control" data-excel-field="Mtg 1 - MERS Nominee" oninput="saveFormData()">
                                 </div>
                             </div>
-        <!-- Made Changes -->
- <div class="mb-3 mt-3">
-                        <label for="legal-description-ref" class="form-label"> Any Comments (Optional)</label>
-                        <textarea id="legal-description-ref" name="legal-description-ref" class="form-control" data-excel-field="Legal Description Ref" oninput="saveFormData()"></textarea>
-                                </div>
-         <!-- Made Changes -->     
                         </fieldset>
                     </div>
                 </div>
-
                 <div id="additionalMortgages"></div>
                 <div class="text-start mb-4 ps-3">
                     <button type="button" class="btn btn-outline-info btn-sm" onclick="addMortgageSection()">
@@ -308,10 +279,10 @@
                 <div id="additionalPropertyDocs"></div>
                 <div class="text-start mb-4 ps-3">
                     <button type="button" class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#addDocModal">
-                        <i class="bi bi-plus-circle me-1"></i> Add Additional Property Document (e.g., Deed, Modification, Assignment, Affidavit, POA)
+                        <i class="bi bi-plus-circle me-1"></i> Add Additional Property Document (e.g., Affidavit, POA)
                     </button>
                 </div>
-                            
+                
                 <hr class="my-4">
 
                 <div id="additionalNOCs"></div>
@@ -320,23 +291,23 @@
                         <i class="bi bi-plus-circle me-1"></i> Add Notice of Commencement
                     </button>
                 </div>
-                            
+
                 <hr class="my-4">
 
                 <div id="additionalUCCs"></div>
                 <div class="text-start mb-4 ps-3">
                     <button type="button" class="btn btn-outline-info btn-sm" onclick="addUCCSection()">
-                        <i class="bi bi-plus-circle me-1"></i> Add UCC - Financing Statement
+                        <i class="bi bi-plus-circle me-1"></i> Add UCC-1 Financing Statement
                     </button>
                 </div>
-                            
+                
                 <div id="additionalUCCContinuations"></div>
                 <div class="text-start mb-4 ps-3">
                     <button type="button" class="btn btn-outline-info btn-sm" onclick="addUCCContinuationSection()">
-                        <i class="bi bi-plus-circle me-1"></i> Add UCC - Continuation/Related
+                        <i class="bi bi-plus-circle me-1"></i> Add UCC-3 Continuation/Related
                     </button>
                 </div>
-                            
+                
                 <hr class="my-4">
                 
                 <div id="additionalDivorces"></div>
@@ -345,7 +316,7 @@
                         <i class="bi bi-people-fill me-1"></i> Add Divorce / Lis Pendens
                     </button>
                 </div>
-                            
+                
                 <hr class="my-4">
                 
                 <div id="additionalJudgments"></div>
@@ -354,8 +325,7 @@
                         <i class="bi bi-exclamation-triangle-fill me-1"></i> Add Judgment / Lien
                     </button>
                 </div>
-                            
-                
+
                 <div class="mt-5 pt-3 border-top d-flex justify-content-between align-items-center">
                     <div>
                         <button type="button" class="btn btn-success me-2" onclick="exportToPDF()">
@@ -392,7 +362,7 @@
                     <p class="text-muted">Enter key details for the document before adding it to the form.</p>
                     <div class="mb-3">
                         <label for="modal-doc-type" class="form-label fw-bold">1. Document Type:</label>
-                        <input type="text" id="modal-doc-type" class="form-control" placeholder="e.g., Any Deed, Affidavit, Power of Attorney, Easement">
+                        <input type="text" id="modal-doc-type" class="form-control" placeholder="e.g., Affidavit, Power of Attorney, Easement">
                     </div>
                     <div class="row g-3">
                         <div class="col-md-6 mb-3">
@@ -418,12 +388,7 @@
                         <label for="modal-doc-inst" class="form-label">6. Instrument No. / Book & Page (Optional):</label>
                         <input type="text" id="modal-doc-inst" class="form-control" placeholder="Instrument number or book/page">
                     </div>
-                    <div class="mb-3 mt-3">
-                        <label for="legal-description-ref" class="form-label"> Any Comments (Optional)</label>
-                        <textarea id="legal-description-ref" name="legal-description-ref" class="form-control" data-excel-field="Legal Description Ref" oninput="saveFormData()"></textarea>
-                    </div>
-              <!-- MADE Changes here Removed Amount Section -->
-             <!-- MADE Changes here -->
+                </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                     <button type="button" class="btn btn-info" onclick="addAdditionalPropertyDocSectionFromModal()">
@@ -433,24 +398,24 @@
             </div>
         </div>
     </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
-<!-- Footer made changes -->
+</body>
     
-
-</body> 
-    <footer class="text-center py-3 mt-5" style="background-color: var(--bs-tertiary-bg);">
-        <p class="mb-0 text-muted small">
-            &copy; <span id="current-year"></span> 
-            <a href="https://in.linkedin.com/company/digitaldreamscapesnetwork" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-reset">
-                Digital DreamScapes Network
-            </a> All rights reserved. 
-            This site is created and developed by Venkatesh 
-            <a href="https://in.linkedin.com/company/digitaldreamscapesnetwork" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
-                <span class="gradient-text">@Digital DreamScapes Network</span>
-            </a>
-        </p>
-    </footer> 
+ <!-- Footer made changes -->
+<footer class="text-center py-3 mt-5" style="background-color: var(--bs-tertiary-bg);">
+    <p class="mb-0 text-muted small">
+        &copy; <span id="current-year"></span> 
+        <a href="https://in.linkedin.com/company/digitaldreamscapesnetwork" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-reset">
+        </a> All rights reserved. 
+        This site is created and developed by Venkatesh 
+        <a href="https://in.linkedin.com/company/digitaldreamscapesnetwork" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+            <span class="gradient-text">@Digital DreamScapes Network</span>
+        </a>
+    </p>
+</footer> 
+    <!-- Footer made changes -->  
 </html>
